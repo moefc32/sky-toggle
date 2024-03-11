@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="res/favicon.svg">
+    <title>That One Toggle from Certain Shitpost | Mfc Website</title>
+    <link rel="stylesheet" href="res/style.css">
+</head>
+
+<body>
+    <input type="checkbox" class="toggle">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkbox = document.querySelector('input[type="checkbox"].toggle');
+
+            function updateTheme() {
+                const isDarkMode = checkbox.checked;
+                document.body.classList.toggle('dark', isDarkMode);
+                localStorage.setItem('darkMode', isDarkMode);
+            };
+
+            checkbox.addEventListener('change', updateTheme);
+            checkbox.checked = localStorage.getItem('darkMode') === 'true';
+            updateTheme();
+        });
+    </script>
+</body>
+
+</html>

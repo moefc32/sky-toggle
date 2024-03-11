@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    font-size: 36px;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 50px;
+    font-family: sans-serif;
+    transition: .5s;
+}
+
+body.dark {
+    background: #212121;
+}
+
+input[type="checkbox"].toggle {
+    appearance: none;
+    position: relative;
+    width: 10rem;
+    width: 6.6rem;
+    height: 2.6rem;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='350px' height='350px' viewBox='0 0 350 350' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 175C0 271.65 78.3502 350 175 350C271.65 350 350 271.65 350 175C350 78.3502 271.65 0 175 0C78.3502 0 0 78.3502 0 175Z' id='Oval-3' fill='%23FFFFFF' fill-opacity='0.12156863' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M40 175C40 249.558 100.442 310 175 310C249.558 310 310 249.558 310 175C310 100.442 249.558 40 175 40C100.442 40 40 100.442 40 175Z' id='Oval-2' fill='%23FFFFFF' fill-opacity='0.12156863' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M80 175C80 122.533 122.533 80 175 80C227.467 80 270 122.533 270 175C270 227.467 227.467 270 175 270C122.533 270 80 227.467 80 175Z' id='Oval' fill='%23FFFFFF' fill-opacity='0.12156863' fill-rule='evenodd' stroke='none' /%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='330px' height='280px' viewBox='0 0 330 280' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpath d='M0 0L330 0L330 280L0 280L0 0Z' id='path_1' /%3E%3CclipPath id='clip_1'%3E%3Cuse xlink:href='%23path_1' clip-rule='evenodd' fill-rule='evenodd' /%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Vector-2-+-Vector-Mask-3'%3E%3Cpath d='M0 0L330 0L330 280L0 280L0 0Z' id='Mask' fill='none' fill-rule='evenodd' stroke='none' /%3E%3Cg clip-path='url(%23clip_1)'%3E%3Cg id='Group-2' transform='translate(-1 140)'%3E%3Cpath d='M267 43C267 19.2517 286.252 0 310 0C333.748 0 353 19.2517 353 43C353 66.7482 333.748 86 310 86C286.252 86 267 66.7482 267 43Z' id='Oval' fill='%239FC3E5' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M228 82.5001C228 63.9984 242.998 49 261.5 49C280.002 49 295 63.9984 295 82.5001C295 101.002 280.002 116 261.5 116C242.998 116 228 101.002 228 82.5001Z' id='Oval-2' fill='%239FC3E5' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M177 111.5C177 81.4005 201.4 57 231.5 57C261.6 57 286 81.4005 286 111.5C286 141.6 261.6 166 231.5 166C201.4 166 177 141.6 177 111.5Z' id='Oval-3' fill='%239FC3E5' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M110 120C110 95.1472 130.147 75 155 75C179.853 75 200 95.1472 200 120C200 144.853 179.853 165 155 165C130.147 165 110 144.853 110 120Z' id='Oval-4' fill='%239FC3E5' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M60 121C60 100.566 76.5655 84 97 84C117.435 84 134 100.566 134 121C134 141.435 117.435 158 97 158C76.5655 158 60 141.435 60 121Z' id='Oval-5' fill='%239FC3E5' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M0 136.5C0 111.923 19.9233 92 44.5 92C69.0767 92 89 111.923 89 136.5C89 161.077 69.0767 181 44.5 181C19.9233 181 0 161.077 0 136.5Z' id='Oval-6' fill='%239FC3E5' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M170 93.9999C170 85.7157 176.716 79 185 79C193.284 79 200 85.7157 200 93.9999C200 102.284 193.284 109 185 109C176.716 109 170 102.284 170 93.9999Z' id='Oval-7' fill='%239FC3E5' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M245 114C245 80.8628 271.863 54 305 54C338.137 54 365 80.8628 365 114C365 147.137 338.137 174 305 174C271.863 174 245 147.137 245 114Z' id='Oval' fill='%239FC3E5' fill-rule='evenodd' stroke='none' /%3E%3C/g%3E%3Cg id='Group' transform='translate(0 170)'%3E%3Cpath d='M275 39C275 17.4609 292.237 0 313.5 0C334.763 0 352 17.4609 352 39C352 60.5391 334.763 78 313.5 78C292.237 78 275 60.5391 275 39Z' id='Oval' fill='%23F4F4F4' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M251 80.5C251 57.0279 270.028 38 293.5 38C316.972 38 336 57.0279 336 80.5C336 103.972 316.972 123 293.5 123C270.028 123 251 103.972 251 80.5Z' id='Oval-2' fill='%23F4F4F4' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M271 99.5C271 76.0279 290.028 57 313.5 57C336.972 57 356 76.0279 356 99.5C356 122.972 336.972 142 313.5 142C290.028 142 271 122.972 271 99.5Z' id='Oval-8' fill='%23F4F4F4' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M201 106.5C201 84.685 218.685 67 240.5 67C262.315 67 280 84.685 280 106.5C280 128.315 262.315 146 240.5 146C218.685 146 201 128.315 201 106.5Z' id='Oval-3' fill='%23F4F4F4' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M172 104C172 90.193 184.088 79 199 79C213.912 79 226 90.193 226 104C226 117.807 213.912 129 199 129C184.088 129 172 117.807 172 104Z' id='Oval-4' fill='%23F4F4F4' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M121 100.5C121 83.6552 136.446 70 155.5 70C174.554 70 190 83.6552 190 100.5C190 117.345 174.554 131 155.5 131C136.446 131 121 117.345 121 100.5Z' id='Oval-5' fill='%23F4F4F4' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M74 106.5C74 92.4169 88.103 81 105.5 81C122.897 81 137 92.4169 137 106.5C137 120.583 122.897 132 105.5 132C88.103 132 74 120.583 74 106.5Z' id='Oval-6' fill='%23F4F4F4' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M0 111.5C0 94.6552 20.5949 81 46 81C71.4051 81 92 94.6552 92 111.5C92 128.345 71.4051 142 46 142C20.5949 142 0 128.345 0 111.5Z' id='Oval-7' fill='%23F4F4F4' fill-rule='evenodd' stroke='none' /%3E%3C/g%3E%3Cpath d='M160.5 72C160.5 74.484 158.484 76.5 156 76.5C158.484 76.5 160.5 78.516 160.5 81C160.5 78.516 162.516 76.5 165 76.5C162.516 76.5 160.5 74.484 160.5 72L160.5 72Z' id='Shape-13' fill='%23FFFFFF' stroke='none' /%3E%3Cpath d='M142 32C142 34.208 140.208 36 138 36C140.208 36 142 37.792 142 40C142 37.792 143.792 36 146 36C143.792 36 142 34.208 142 32L142 32Z' id='Shape-12' fill='%23FFFFFF' stroke='none' /%3E%3Cpath d='M122 59C122 61.208 120.208 63 118 63C120.208 63 122 64.792 122 67C122 64.792 123.792 63 126 63C123.792 63 122 61.208 122 59L122 59Z' id='Shape-11' fill='%23FFFFFF' stroke='none' /%3E%3Cpath d='M75 104C75 106.208 73.208 108 71 108C73.208 108 75 109.792 75 112C75 109.792 76.792 108 79 108C76.792 108 75 106.208 75 104L75 104Z' id='Shape-10' fill='%23FFFFFF' stroke='none' /%3E%3Cpath d='M71.5 53C71.5 54.932 69.932 56.5 68 56.5C69.932 56.5 71.5 58.068 71.5 60C71.5 58.068 73.068 56.5 75 56.5C73.068 56.5 71.5 54.932 71.5 53L71.5 53Z' id='Shape-9' fill='%23FFFFFF' stroke='none' /%3E%3Cpath d='M50.5 83C50.5 84.932 48.932 86.5 47 86.5C48.932 86.5 50.5 88.068 50.5 90C50.5 88.068 52.068 86.5 54 86.5C52.068 86.5 50.5 84.932 50.5 83L50.5 83Z' id='Shape-8' fill='%23FFFFFF' stroke='none' /%3E%3Cpath d='M38.5 94C38.5 95.932 36.932 97.5 35 97.5C36.932 97.5 38.5 99.068 38.5 101C38.5 99.068 40.068 97.5 42 97.5C40.068 97.5 38.5 95.932 38.5 94L38.5 94Z' id='Shape-7' fill='%23FFFFFF' stroke='none' /%3E%3Cpath d='M36.5 36C36.5 37.932 34.932 39.5 33 39.5C34.932 39.5 36.5 41.068 36.5 43C36.5 41.068 38.068 39.5 40 39.5C38.068 39.5 36.5 37.932 36.5 36L36.5 36Z' id='Shape-6' fill='%23FFFFFF' stroke='none' /%3E%3Cpath d='M143 88C143 90.76 140.76 93 138 93C140.76 93 143 95.24 143 98C143 95.24 145.24 93 148 93C145.24 93 143 90.76 143 88L143 88Z' id='Shape-3' fill='%23FFFFFF' stroke='none' /%3E%3Cpath d='M182.5 36C182.5 40.692 178.692 44.5 174 44.5C178.692 44.5 182.5 48.308 182.5 53C182.5 48.308 186.308 44.5 191 44.5C186.308 44.5 182.5 40.692 182.5 36L182.5 36Z' id='Shape-2' fill='%23FFFFFF' stroke='none' /%3E%3Cpath d='M70.5 14C70.5 18.14 67.14 21.5 63 21.5C67.14 21.5 70.5 24.86 70.5 29C70.5 24.86 73.86 21.5 78 21.5C73.86 21.5 70.5 18.14 70.5 14L70.5 14Z' id='Shape' fill='%23FFFFFF' stroke='none' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-color: #386BA7;
+    background-position: -2.75rem center, center bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 8rem, 6.6rem;
+    border-radius: 6rem;
+    box-shadow: inset .125rem .125rem .25rem 0 rgba(0, 0, 0, .5);
+    cursor: pointer;
+    overflow: hidden;
+    transition: .5s;
+}
+
+input[type="checkbox"]:checked.toggle {
+    background-color: #191C2C;
+    background-position: 1.75rem center, center top;
+    background-size: 7rem, 6.6rem;
+}
+
+input[type="checkbox"].toggle::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: .25rem;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='100px' height='100px' viewBox='0 0 108 108' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpath d='M0 54C0 24.1766 24.1766 0 54 0C83.8234 0 108 24.1766 108 54C108 83.8234 83.8234 108 54 108C24.1766 108 0 83.8234 0 54Z' id='path_1' /%3E%3CclipPath id='clip_1'%3E%3Cuse xlink:href='%23path_1' clip-rule='evenodd' fill-rule='evenodd' /%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Vector-2-+-Vector-Mask'%3E%3Cpath d='M0 54C0 24.1766 24.1766 0 54 0C83.8234 0 108 24.1766 108 54C108 83.8234 83.8234 108 54 108C24.1766 108 0 83.8234 0 54Z' id='Mask' fill='none' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M20 62.5C20 52.2827 28.2827 44 38.5 44C48.7173 44 57 52.2827 57 62.5C57 72.7173 48.7173 81 38.5 81C28.2827 81 20 72.7173 20 62.5Z' id='Oval' fill='%239A9DB2' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M69 73C69 66.9249 73.9249 62 80 62C86.0751 62 91 66.9249 91 73C91 79.0751 86.0751 84 80 84C73.9249 84 69 79.0751 69 73Z' id='Oval' fill='%239A9DB2' fill-rule='evenodd' stroke='none' /%3E%3Cpath d='M44 27C44 21.4772 48.4772 17 54 17C59.5228 17 64 21.4772 64 27C64 32.5228 59.5228 37 54 37C48.4772 37 44 32.5228 44 27Z' id='Oval-2' fill='%239A9DB2' fill-rule='evenodd' stroke='none' /%3E%3C/g%3E%3C/svg%3E");
+    background-color: #ffbd29;
+    background-position: 5rem center;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    border-radius: 6rem;
+    box-shadow: inset .125rem .125rem .125rem 0 rgba(255, 255, 255, .5),
+        inset -.125rem -.125rem .125rem 0 rgba(0, 0, 0, .25);
+    transition: .5s;
+}
+
+input[type="checkbox"]:checked.toggle::after {
+    left: 4.25rem;
+    background-color: #c4c7d7;
+    background-position: center center;
+}
