@@ -1,8 +1,5 @@
 # Sky Toggle
-<a href="https://opensource.org/license/mit">
-    <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" height="24" />
-</a>
-<br /><br />
+<a href="https://opensource.org/license/mit"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" height="24" /></a>
 
 That one toggle from certain shitpost
 
